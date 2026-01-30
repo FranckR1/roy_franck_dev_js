@@ -37,6 +37,12 @@ app.get('/countries/short', (req, res) => {
     res.send(filter)
 })
 
+app.get('/countries/:id', (req, res) => {
+    const id = req.params.id;
+    const country = countries.find(countrie => countrie.ccn3 === id);
+    res.send(country);
+})
+
 app.listen(PORT, () =>{
     console.log(`listenning on port ${PORT}`);
 });
