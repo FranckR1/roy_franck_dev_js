@@ -4,7 +4,7 @@ const app = express();
 
 const PORT = 3000;
 
-const countries = require('./countries.json');
+const countries = require('./data/countries.json');
 
 app.get('/countries', (req, res) => {
     res.send(countries)
